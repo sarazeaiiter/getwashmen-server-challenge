@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "lib": ["es5", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "rootDir": "./app",
+    "outDir": "./build/",
+    "sourceMap": true,
+    "target": "es6",
+    "removeComments": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true
+  },
+  "compileOnSave": true,
+  "include": ["app/"]
+}
