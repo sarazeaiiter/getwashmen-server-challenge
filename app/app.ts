@@ -1,5 +1,7 @@
 import express from "express";
+import { serve, setup } from "swagger-ui-express"
 import { partners } from "./controllers/";
+import { swaggerDocument } from './swagger'
 const app = express();
 
 const appid = 3000; //process.env.APPID;
@@ -14,6 +16,8 @@ app.get("/partners", (req, res) => {
   }
 });
 
+
+app.use("/api-docs", serve, setup(swaggerDocument));
 
 app.listen(appid, () => {
   console.log(
