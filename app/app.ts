@@ -9,10 +9,10 @@ const appid = 3000; //process.env.APPID;
 app.get("/partners", (req, res) => {
   let range = Number(req.query.range);
   if (range && range > 0) {
-    res.send(partners.getAllWithinRange(range))
+    res.send({ partners: partners.getAllWithinRange(range), areAll: false })
   }
   else {
-    res.send(partners.getAll())
+    res.send({ partners: partners.getAll(), areAll: true })
   }
 });
 
