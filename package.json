@@ -5,7 +5,7 @@
   "main": "build/app.js",
   "scripts": {
     "start": "nodemon build/app.js",
-    "build-docker": "docker build -t getwatchmen-challenge . && tsc",
+    "build-docker": "npm install && docker build -t getwatchmen-challenge .",
     "run-docker": "docker run -it -p 9000:3000  -v $(pwd):/app getwashmen-challenge",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
